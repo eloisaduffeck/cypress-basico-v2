@@ -166,7 +166,7 @@ it('verifica que a política de privacidade abre em outra aba sem a necessidade 
     cy.get('#privacy a').should('have.attr', 'target', '_blank')
 })
 
-it.only('acessa página de política de privadidade removendo o target e clicando no link', function (){
+it('acessa página de política de privadidade removendo o target e clicando no link', function (){
     cy.get('#privacy a')
       .invoke('removeAttr', 'target')
       .click()
