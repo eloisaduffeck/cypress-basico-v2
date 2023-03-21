@@ -153,15 +153,6 @@ it('Seleciona um arquivo utilizando uma fixture para a qual foi dda um alias', f
         expect($input[0].files[0].name).to.equal('example.json')
     })
 })
-it('Seleciona um arquivo utilizando uma fixture para a qual foi dda um alias', function (){
-    cy.fixture('example.json').as('sampleFile')
-    cy.get('input[type="file"]')
-      .selectFile('@sampleFile')   
-      .should(function($input) {
-        expect($input[0].files[0].name).to.equal('example.json')
-    })
-})
-
 it('verifica que a política de privacidade abre em outra aba sem a necessidade de um clique', function (){
     cy.get('#privacy a').should('have.attr', 'target', '_blank')
 })
